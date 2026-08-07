@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Diğer uygulamalar üzerinde görüntüleme (Overlay / Pencere) İzni -->
+    <!-- Gerekli İzinler -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    
-    <!-- Arka plan ve ağ izinleri -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -16,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <!-- Ana Ekran / Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Sineği Ekrana Çizen Arka Plan Servisi -->
+        <service
+            android:name=".FlyService"
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
 
