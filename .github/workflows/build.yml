@@ -22,10 +22,11 @@ jobs:
 
     - name: Build Debug APK
       run: |
-        gradle :SinekApp:SinekApp:app:assembleDebug
+        cd SinekApp
+        gradle assembleDebug
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: sinek-app-apk
-        path: SinekApp/SinekApp/app/build/outputs/apk/debug/app-debug.apk
+        path: SinekApp/app/build/outputs/apk/debug/app-debug.apk
