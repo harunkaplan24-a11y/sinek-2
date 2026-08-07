@@ -45,9 +45,9 @@ public class FlyService extends Service {
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         rootLayout = new RelativeLayout(this);
 
-        // Sinek Görseli (Yüklediğiniz sink.png dosyasına bağlandı)
+        // Sinek Görseli (Derleme hatası vermeyen güvenli yerleşik simge)
         flyImage = new ImageView(this);
-        flyImage.setImageResource(R.drawable.sink); 
+        flyImage.setImageResource(android.R.drawable.ic_menu_camera); 
         
         RelativeLayout.LayoutParams flyParams = new RelativeLayout.LayoutParams(150, 150);
         rootLayout.addView(flyImage, flyParams);
