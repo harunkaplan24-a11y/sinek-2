@@ -23,7 +23,7 @@ jobs:
     - name: Build Debug APK
       run: |
         cd SinekApp
-        gradle assembleDebug
+        gradle :app:assembleDebug
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
