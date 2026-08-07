@@ -45,9 +45,9 @@ public class FlyService extends Service {
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         rootLayout = new RelativeLayout(this);
 
-        // Sinek Görseli
+        // Sinek Görseli (Yüklediğiniz sink.png dosyasına bağlandı)
         flyImage = new ImageView(this);
-        flyImage.setImageResource(android.R.drawable.ic_menu_compass); // Kendi sinek PNG'nizi ekleyebilirsiniz
+        flyImage.setImageResource(R.drawable.sink); 
         
         RelativeLayout.LayoutParams flyParams = new RelativeLayout.LayoutParams(150, 150);
         rootLayout.addView(flyImage, flyParams);
@@ -143,7 +143,7 @@ public class FlyService extends Service {
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Sinek Çalışıyor")
                 .setContentText("Sinek ekranda dolaşıyor...")
-                .setSmallIcon(android.R.drawable.ic_menu_compass)
+                .setSmallIcon(R.drawable.sink)
                 .build();
 
         startForeground(1, notification);
