@@ -143,7 +143,7 @@ public class FlyService extends Service {
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Sinek Çalışıyor")
                 .setContentText("Sinek ekranda dolaşıyor...")
-                .setSmallIcon(R.drawable.sink)
+                .setSmallIcon(android.R.drawable.ic_menu_compass)
                 .build();
 
         startForeground(1, notification);
